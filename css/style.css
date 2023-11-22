@@ -4,7 +4,7 @@ html {
 }
 body {
     margin: 0;
-    background-color: #83af9b;
+    
 }
 
 .cass {
@@ -115,6 +115,7 @@ a {
 
 #portfolio {
     height: 100%;
+    background-color: #83af9b;
     padding: 15rem 1rem;
     display: flex;
     justify-content: center;
