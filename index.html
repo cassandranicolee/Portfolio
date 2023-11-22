@@ -16,20 +16,37 @@
 </script>
 <body>
     <section class="cass">
+
+        <header class="header">
+                <nav class="navbar">
+                    <h1 style="font-size: 3rem; font-weight: 700;">CNCC</h1>
+                    <ul class="nav-menu">
+                        <li class="nav-item">
+                            <a href="#home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#portfolio">Portfolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#service">Service</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#about">About</a>
+                        </li>
+                    </ul>
+                    <div class="hamburger">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                </nav>
+        </header>
+
+
         <section id="home">
-            <nav style="max-width: 160rem;">
-                <h1 class="logo">CNCC</h1>
-                <ul class="hidden w-full md:flex md:items-center md:w-auto ul-ui-container">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#service">Service</a></li>
-                    <li><a href="#about">About</a></li>
-                </ul>
-            </nav>
-    
             <div class="main-cont">
                 <div class="secon-cont">
-                    <div>
+                    <div style="font-size: 2rem !important;">
                         <h2 class="personal">Personal Portfolio landing page</h2>
                         <br><br>
                         <h1>Hi, I'm <span class="name">Cassandra Nicole Cortez</span></h1>
@@ -48,24 +65,25 @@
         </section>
     
         <section id="portfolio" style="height: 100%;">
+
             <h1 style="font-size: 3rem; margin-bottom: 1rem;
                 color: white; font-weight: bold; text-shadow: 0 0 20px black;">My Works</h1>
             <div class="grid">
                 <div style="text-align: center;">
-                    <div style="height: 330px; width: 500px; display: flex;">
-                        <img style="height: 300px; object-fit: cover;" src="./img/works.png" alt="">
+                    <div >
+                        <img class="pipol"  src="./img/works.png" alt="">
                     </div>
-                </div>
+                </div><br>
     
                 <div>
-                    <div style="height: 330px; width: 500px; display: flex;">
-                        <img style="height: 300px; object-fit: cover;" src="./img/works2.png" alt="">
+                    <div >
+                        <img class="pipol"  src="./img/works2.png" alt="">
                     </div>
-                </div>
+                </div><br>
         
                 <div>
-                    <div style="height: 330px; width: 500px; display: flex;">
-                        <img style="height: 300px; object-fit: cover;" src="./img/works3.png" alt="">
+                    <div >
+                        <img class="pipol"  src="./img/works3.png" alt="">
                     </div>
                 </div>
             </div>
@@ -104,21 +122,25 @@
             </script>
         </section>
     
-        <section id="about" style="height: 100%; padding: 20rem 1rem; background-color: #83af9b !important;">
-            <div class="huha" style="display: grid; grid-template-columns: 1fr 3fr;">
+    
+    
+    
+        <section id="about">
+            <div class="huha" >
                 <div class="hidden w-full md:flex md:items-center md:w-auto ul-ui-container">
                     <img style="height: 400px; 
                     box-shadow: 5px 5px 10px pink;" src="./img/grad.jpg" alt="">
                 </div>
-                <div class="harsh" style="display: flex; align-items: center; justify-content: center; color: white;
-                    text-shadow: 0 0 10px black;">
-                    
+                <div style="background-color: #83af9b;padding: 10rem 2rem !important;">
+                    <p style="font-size: 2rem !important;">
                         In the realm of digital creation, I am Cassandra Cortez, a dedicated student immersed in the captivating 
                         fields of web development and design. Through the lens of creativity, I wield a palette of skills, seamlessly 
                         blending the art of photo and video editing. My proficiency extends to the intricate world of web design, 
                         where I shape visions into reality using tools like Figma. With a commitment to continuous learning, I am 
                         navigating the dynamic landscape of technology, driven by a passion to craft meaningful and visually 
                         compelling digital experiences.
+                    </p>
+                       
                     
                 </div>
                 
@@ -128,7 +150,7 @@
         
     
         <footer id="footer">
-            <div style="display: flex; justify-content: space-around;">
+            <div style="display: flex; justify-content: space-around; gap: 1rem;">
                 <p style="color: rgb(126, 125, 125); font-size: 15px; font-family: 'Times New Roman', Times, serif;">
                     elit. Suscipit voluptate <br>
                     omnis reprehenderit <br> iure fuga, aspernatur <br> est numquam explicabo, <br>
@@ -156,6 +178,27 @@
             </div>
         </footer>
     </section>
-    
+
+
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav-menu");
+
+hamburger.addEventListener("click", mobileMenu);
+
+function mobileMenu() {
+    hamburger.classList.toggle("active");
+    navMenu.classList.toggle("active");
+}
+
+const navLink = document.querySelectorAll(".nav-link");
+
+navLink.forEach(n => n.addEventListener("click", closeMenu));
+
+function closeMenu() {
+    hamburger.classList.remove("active");
+    navMenu.classList.remove("active");
+}
+    </script>
 </body>
 </html>

@@ -8,7 +8,7 @@ body {
 }
 
 .cass {
-    max-width: 160rem;
+    max-width: 190rem;
     margin: 0 auto;
 }
 nav {
@@ -32,12 +32,16 @@ nav {
 ul {
     display: flex;
     margin-right: 20px;
-    
 }
 
 li {
     display: inline-block;
     margin-right: 20px;
+    
+}
+
+a {
+    font-size: 2rem !important;
 }
 
 li:hover {
@@ -54,15 +58,17 @@ a {
 
 #home {
     height: 100%;
+    
 }
 
 .main-cont {
     background-color: pink;
     height: 100%;
-    padding: 15rem 1rem;
+    padding: 25rem 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
+    
 }
 
 .profile {
@@ -79,7 +85,7 @@ a {
     gap: 10rem;
 }
 .personal {
-    font-size: 2rem;
+    font-size: 3rem;
     color: #83af9b;
     text-shadow: 1px 1px 1px black;
     font-weight: 700;
@@ -89,7 +95,7 @@ a {
     height: 30px;
     background-color: #83af9b;
     color: white;
-    font-size: 1rem;
+    font-size: 2rem;
     cursor: pointer;
     border: solid 1px;
     border-radius: 10px;
@@ -116,21 +122,135 @@ a {
 #portfolio {
     height: 100%;
     background-color: #83af9b;
-    padding: 15rem 1rem;
+    padding: 10rem 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
-.grid {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+
 
 .img-2 {
     height: 300px;
+}
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header{
+    border-bottom: 1px solid #E2E8F0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    max-width: 190rem;
+}
+
+.hamburger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #101010;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-item {
+    margin-left: 5rem;
+}
+
+.nav-link{
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #475569;
+}
+
+.nav-link:hover{
+    color: #482ff7;
+}
+
+.nav-logo {
+    font-size: 2.1rem;
+    font-weight: 500;
+    color: #482ff7;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 5rem;
+        flex-direction: column;
+        background-color: #fff;
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow:
+            0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-item {
+        margin: 2.5rem 0;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
 }
 
 /* service */
@@ -148,10 +268,7 @@ a {
 }
 
 @media only screen and (max-width: 767px) {
-    .huha {
-        display: grid;
-        grid-template-columns: 1fr;
-    }
+    
 
     .secon-cont {
         padding-left: 1rem;
@@ -168,5 +285,47 @@ a {
     height: 100%;
     padding: 2rem;
     background-color: black;
+}
+
+@media only screen and (min-width: 768px) {
+    .pipol {
+        height: 300px; 
+        object-fit: cover;
+    }
+
+    .huha {
+        display: grid; 
+        grid-template-columns: 1fr 3fr;
+        background-color: #83af9b;
+    }
+
+    #about {
+        height: 100%; 
+        padding: 20rem 1rem; 
+        background-color: #83af9b;
+    }
+
+    .grid {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width: 767px) {
+    .pipol {
+        height: 170px; 
+        
+    }
+    #about {
+        height: 100%;
+        padding: 15rem 1rem; 
+        background-color: #83af9b;
+    }
+    .huha {
+        background-color: #83af9b;
+    }
 }
 
