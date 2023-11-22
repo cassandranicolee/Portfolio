@@ -6,6 +6,11 @@ body {
     margin: 0;
     background-color: #83af9b;
 }
+
+.cass {
+    max-width: 160rem;
+    margin: 0 auto;
+}
 nav {
     height: 50px;
     width: 100%;
@@ -53,7 +58,8 @@ a {
 
 .main-cont {
     background-color: pink;
-    height: 90vh;
+    height: 100%;
+    padding: 15rem 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -109,7 +115,7 @@ a {
 
 #portfolio {
     height: 100%;
-    padding: 5rem 0;
+    padding: 15rem 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -129,7 +135,8 @@ a {
 /* service */
 
 .certificates {
-    height: 100vh;
+    height: 100%;
+    padding: 20rem 1rem;
     background-color: pink;
     text-align: center;
     padding: 10rem 0;
@@ -143,10 +150,6 @@ a {
     .huha {
         display: grid;
         grid-template-columns: 1fr;
-    }
-    .harsh {
-        
-        
     }
 
     .secon-cont {
