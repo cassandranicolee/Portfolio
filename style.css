@@ -1,0 +1,167 @@
+html {
+    font-family: 'Courier New', Courier, monospace !important;
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    background-color: #83af9b;
+}
+nav {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+    background-color: pink;
+    border-bottom: solid 2px black;
+}
+
+.logo {
+    font-size: 2rem;
+    margin-left: 30px;
+    font-weight: 700;
+}
+
+ul {
+    display: flex;
+    margin-right: 20px;
+    
+}
+
+li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+li:hover {
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+
+a {
+    color: black;
+    font-size: 1.5rem;
+    text-decoration: none;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#home {
+    height: 100%;
+}
+
+.main-cont {
+    background-color: pink;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile {
+    height: 400px;
+    box-shadow: 2px 2px 10px #83af9b;
+    border: solid 2rem #83af9b;
+
+}
+
+.secon-cont {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 10rem;
+}
+.personal {
+    font-size: 2rem;
+    color: #83af9b;
+    text-shadow: 1px 1px 1px black;
+    font-weight: 700;
+}
+.btn {
+    width: 200px;
+    height: 30px;
+    background-color: #83af9b;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    border: solid 1px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.freelance {
+    color: rgba(0, 0, 0, 0.404);
+    font-weight: 400;
+}
+.name {
+    color: #83af9b;
+    text-shadow: 1px 1px 1px black;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+/* portfolio */
+
+#portfolio {
+    height: 100%;
+    padding: 5rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.grid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-2 {
+    height: 300px;
+}
+
+/* service */
+
+.certificates {
+    height: 100vh;
+    background-color: pink;
+    text-align: center;
+    padding: 10rem 0;
+}
+
+.card {
+    background-color: #83af9b;
+}
+
+@media only screen and (max-width: 767px) {
+    .huha {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .harsh {
+        
+        
+    }
+
+    .secon-cont {
+        padding-left: 1rem;
+        display: flex;
+    }
+
+}
+/* about */
+
+
+
+
+#footer {
+    height: 100%;
+    padding: 2rem;
+    background-color: black;
+}
