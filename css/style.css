@@ -314,7 +314,7 @@ a {
     }
 }
 
-@media only screen and (min-width: 767px) {
+@media only screen and (max-width: 767px) {
     .pipol {
         height: 170px; 
         
@@ -326,6 +326,14 @@ a {
     }
     .huha {
         background-color: #83af9b;
+    }
+
+    .huha8 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
     }
 }
 
